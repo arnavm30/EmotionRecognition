@@ -3,7 +3,7 @@
 
 This repository is the official implementation of [Emotion Recognition Using 3D FaceMesh: Graph Neural Networks for Mental Health](https://medium.com/@arnavm30/emotion-recognition-using-3d-face-mesh-ml-for-mental-health-744f822f8e41). 
 
-> This is the code for an emotion recognition (7 emotion multiclass classifiation) problem. 
+> This is the code for an emotion recognition (7 emotion multiclass classification) problem. 
 The attached notebook first creates a dataset of 3D face mesh (468 landmarks) using [Mediapipe Face Mesh](https://arxiv.org/abs/2006.10962) from the images of the dataset. A graph is constructed from the 3D face mesh, using both `FACE_CONTOURS` and `FACE_TESSELATIONS` as edges and the landmarks as nodes.
 In the next section, supervised learning techniques like Logistic Regression, Ridge Classifier, Random Forests, and XGBoost models are used to obtain a baseline. In the section after, an MLP with a Resnet50 in the first stage to extract features from each image for context and concatenate them to the face meshes is trained. In the final section, A GNN is created and trained on the graphs.
 The models were hyperparameter-tuned initially using Grid Search and then Bayesian Optimization.
